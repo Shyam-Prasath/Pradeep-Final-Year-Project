@@ -6,7 +6,7 @@ The platform combines a modern music UI, real-time APIs, and machine-learning–
 🚀 Features
 🎧 Music Discovery
 
-Browse latest Tamil & Indian songs
+Browse latest Tamil \& Indian songs
 
 Alphabet-based album filtering (A–Z, 0–9)
 
@@ -30,7 +30,7 @@ English
 
 Real-time search with starts-with filtering
 
-🤖 AI & Emotion Integration
+🤖 AI \& Emotion Integration
 
 Emotion-based music recommendation system
 
@@ -40,7 +40,7 @@ Audio feature analysis (energy, valence, tempo, etc.)
 
 📊 Analytics Dashboard
 
-Total songs, artists, languages & emotions
+Total songs, artists, languages \& emotions
 
 Animated counters with + indicators
 
@@ -111,7 +111,7 @@ Audio feature extraction
 
 Emotion classification
 
-Popularity & language filtering
+Popularity \& language filtering
 
 🔗 API Endpoints Used
 GET /latest-songs
@@ -122,6 +122,7 @@ GET /new-tamil-hits
 GET /tamil-artists
 GET /analytics/summary
 GET /latest-language-songs?language=Tamil
+
 
 
 ⚠️ APIs are login-less and free, using public music datasets and internal ML services.
@@ -146,7 +147,7 @@ GET /latest-language-songs?language=Tamil
 
 🕒 Dynamic Branding Logic
 
-Header & footer initially show “Madan Music”
+Header \& footer initially show “Madan Music”
 
 Automatically switches to “Kholi Music” after delay
 
@@ -157,6 +158,7 @@ Implemented using class-based DOM selection (no duplicate IDs)
 Start backend server:
 
 uvicorn main:app --reload
+
 
 
 Open index.html in browser
@@ -175,7 +177,7 @@ Firefox
 
 📌 Current Features
 
-User login & playlists
+User login \& playlists
 
 Spotify API integration
 
@@ -184,3 +186,4 @@ Real-time voice recording
 Recommendation history
 
 Cloud deployment
+
