@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Kholi Music - AI Music Recommendation</title>
+    <link rel="icon" href="img/core-img/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!--- Header --->
+    <header class="header-area">
+        <div class="oneMusic-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <nav class="classy-navbar justify-content-between" id="oneMusicNav">
+                        <a href="audio.html"
+                            class="nav-brand brandText"
+                            style="display:flex; color:white; font-size: 25px;">
+                            Madan Music
+                        </a>
+
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <div class="classy-menu">
+
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="albums-store.html">Music Recommendation</a></li>
+                                    <li><a href="#">AI System</a>
+                                        <ul class="dropdown" style="width: max-content;">
+                                            <li><a href="voice.html">Voice Emotion Detection</a></li>
+                                            <li><a href="emotion.html">Emotion-Based Songs</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="audio.html">Audio Features & ML</a></li>
+                                            <li><a href="#">Supported Emotions</a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#">Happy</a></li>
+                                                    <li><a href="#">Sad</a></li>
+                                                    <li><a href="#">Angry</a></li>
+                                                    <li><a href="#">Surprised</a>
+                                                    <li><a href="#">Neutral</a></li>
+                                                        <ul class="dropdown">
+                                                            <li><a href="#">Disgusted</a></li>
+                                                            <li><a href="#">Fearful</a></li>
+                                                            <li><a href="#">Calm</a></li>
+                                                            <li><a href="#">Confused</a></li>
+                                                            <li><a href="#">Overwhelmed</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#">Advance Emotions</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="analytics.html">Analytics</a></li>
+                                    <li><a href="language-selection.html">Language Selection</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+
+                                <div class="login-register-cart-button d-flex align-items-center">
+                                    <div class="login-register-btn mr-50">
+                                        <a href="login.html" id="loginBtn">Login / Register</a>
+                                    </div>
+
+                                    <div class="cart-btn" onclick="window.location.href='audio.html'">
+                                        <p>
+                                            <span class="icon-microphone"></span>
+                                            <span class="quantity">AI</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header -->
+
+    <!-- Hero-->
+    <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/hero8.png);">
+        <div class="bradcumbContent">
+            <p>See what’s new</p>
+            <h2>Langauge selection</h2>
+        </div>
+    </div>
+    <!-- Hero -->
+
+
+    <!-- Songs Selection -->
+    <section class="elements-area section-padding-100">
+        <div class="container">
+
+            <div class="elements-title mb-70 text-center">
+                <h2>Select Language & Discover Songs</h2>
+                <p>Filter music based on language and search your favorite tracks</p>
+            </div>
+
+            <!-- Controls -->
+            <div class="row justify-content-center mb-50">
+
+                <div class="col-md-3 mb-20" style="padding: 9px;">
+                    <select id="languageSelect" class="form-control">
+                        <option value="Tamil">Tamil</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="Telugu">Telugu</option>
+                        <option value="Malayalam">Malayalam</option>
+                        <option value="English">English</option>
+                    </select>
+                </div>
+
+                <div class="col-md-5 mb-20" style="padding: 9px;">
+                    <input
+                        type="text"
+                        id="searchInput"
+                        class="form-control"
+                        placeholder="Search by song or artist..."
+                        oninput="filterSongsLive()"
+                    >
+                </div>
+
+                <div class="col-md-2 mb-20" style="padding: 9px;">
+                    <button class="btn btn-block" onclick="loadSongs()" style="border-radius: 1rem; padding: 7px 16px; background-color: transparent; border: 2px solid black; color: black; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='black';this.style.color='white';" onmouseout=" this.style.backgroundColor='transparent'; this.style.color='black';">
+                        Search
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Loader text -->
+            <div class="text-center mb-30">
+                <p id="songStatus" style="font-weight:600;"></p>
+            </div>
+
+            <!-- Songs Grid -->
+            <div class="row" id="songsContainer"></div>
+
+        </div>
+    </section>
+    <!-- Songs Selection -->
+
+    <!-- Footer -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row d-flex flex-wrap align-items-center">
+                <div class="col-12 col-md-6">
+                    <a href="audio.html"
+                            class="nav-brand brandText"
+                            style="display:flex; color:white; font-size: 25px;">
+                            Madan Music
+                    </a>
+                <p class="copywrite-text">
+                    <a href="#">
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script>
+                        All rights reserved | Built with 
+                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        for Voice Emotion Based Music Recommendation
+                    </a>
+                </p>
+            </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="footer-nav" style="display: flex;">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="albums-store.html">Music Recommend</a></li>
+                            <li><a href="analytics.html">Analytics</a></li>
+                            <li><a href="language-selection.html">Language</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer -->
+
+    <!-- Javascript -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="js/bootstrap/popper.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/plugins/plugins.js"></script>
+    <script src="js/active.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        let allSongs = [];
+
+        async function loadSongs() {
+            const language = document.getElementById("languageSelect").value;
+            const container = document.getElementById("songsContainer");
+            const status = document.getElementById("songStatus");
+
+            container.innerHTML = "";
+            status.innerText = "Loading songs... 🎶";
+
+            try {
+                const res = await fetch(`http://127.0.0.1:8000/latest-language-songs?language=${encodeURIComponent(language)}`);
+                const data = await res.json();
+
+                allSongs = (data.results || []).filter(s =>
+                    s.trackName && s.previewUrl
+                );
+
+                if (!allSongs.length) {
+                    status.innerText = "No songs found 😕";
+                    return;
+                }
+
+                status.innerText = `Showing ${allSongs.length} ${language} songs`;
+                renderSongs(allSongs.slice(0, 30));
+
+            } catch (err) {
+                console.error(err);
+                status.innerText = "Failed to load songs ❌";
+            }
+        }
+
+        function filterSongsLive() {
+            const search = document.getElementById("searchInput").value.toLowerCase();
+            const status = document.getElementById("songStatus");
+
+            let filtered = allSongs.filter(song =>
+                song.trackName.toLowerCase().startsWith(search)
+            ).slice(0, 30);
+
+            if (!filtered.length) {
+                status.innerText = "No songs found 😕";
+                document.getElementById("songsContainer").innerHTML = "";
+                return;
+            }
+
+            status.innerText = `Showing ${filtered.length} matching songs`;
+            renderSongs(filtered);
+        }
+
+        function renderSongs(songs) {
+            const container = document.getElementById("songsContainer");
+            container.innerHTML = "";
+
+            songs.forEach(song => {
+                container.innerHTML += `
+                    <div class="col-md-4 mb-30">
+                        <div class="single-album-area">
+                            <div class="album-thumb">
+                                <img src="${song.artworkUrl100.replace('100x100','600x600')}" alt="">
+                            </div>
+                            <div class="album-info">
+                                <h5>${song.trackName}</h5>
+                                <p>${song.artistName}</p>
+                                <a href="${song.previewUrl}" target="_blank"
+                                    class="btn btn-sm oneMusic-btn mt-10"
+                                    style="border-radius:1rem">
+                                    ▶ Preview
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const brandTexts = document.querySelectorAll(".brandText");
+
+            setTimeout(() => {
+                brandTexts.forEach(el => {
+                    el.textContent = "Kholi Music";
+                });
+            }, 30000); 
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Kholi Music - AI Music Recommendation</title>
+    <link rel="icon" href="img/core-img/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!--- Header --->
+    <header class="header-area">
+        <div class="oneMusic-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <nav class="classy-navbar justify-content-between" id="oneMusicNav">
+                        <a href="audio.html"
+                            class="nav-brand brandText"
+                            style="display:flex; color:white; font-size: 25px;">
+                            Madan Music
+                        </a>
+
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <div class="classy-menu">
+
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="albums-store.html">Music Recommendation</a></li>
+                                    <li><a href="#">AI System</a>
+                                        <ul class="dropdown" style="width: max-content;">
+                                            <li><a href="voice.html">Voice Emotion Detection</a></li>
+                                            <li><a href="emotion.html">Emotion-Based Songs</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="audio.html">Audio Features & ML</a></li>
+                                            <li><a href="#">Supported Emotions</a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#">Happy</a></li>
+                                                    <li><a href="#">Sad</a></li>
+                                                    <li><a href="#">Angry</a></li>
+                                                    <li><a href="#">Surprised</a>
+                                                    <li><a href="#">Neutral</a></li>
+                                                        <ul class="dropdown">
+                                                            <li><a href="#">Disgusted</a></li>
+                                                            <li><a href="#">Fearful</a></li>
+                                                            <li><a href="#">Calm</a></li>
+                                                            <li><a href="#">Confused</a></li>
+                                                            <li><a href="#">Overwhelmed</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#">Advance Emotions</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="analytics.html">Analytics</a></li>
+                                    <li><a href="language-selection.html">Language Selection</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+
+                                <div class="login-register-cart-button d-flex align-items-center">
+                                    <div class="login-register-btn mr-50">
+                                        <a href="login.html" id="loginBtn">Login / Register</a>
+                                    </div>
+
+                                    <div class="cart-btn" onclick="window.location.href='audio.html'">
+                                        <p>
+                                            <span class="icon-microphone"></span>
+                                            <span class="quantity">AI</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header -->
+
+    <!-- Hero-->
+    <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/hero10.png);">
+        <div class="bradcumbContent">
+            <p>See what’s new</p>
+            <h2>Analytics</h2>
+        </div>
+    </div>
+    <!-- Hero -->
+
+    <!-- ANALYTICS SECTION -->
+    <section class="elements-area mt-30 section-padding-100-0">
+        <div class="container">
+            <div class="elements-title mb-70 text-center">
+                <h2>Overall Platform Statistics</h2>
+                <p>Live insights from Spotify dataset & AI emotion mapping</p>
+            </div>
+
+            <div class="row text-center mb-100">
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-cool-fact">
+                        <h2><span id="totalSongs" class="counter">0</span><span class="plus-sign">+</span></h2>
+                        <p>Total Songs</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-cool-fact">
+                        <h2><span id="totalArtists" class="counter">0</span><span class="plus-sign">+</span></h2>
+                        <p>Total Artists</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-cool-fact">
+                        <h2><span id="totalLanguages" class="counter">0</span><span class="plus-sign">+</span></h2>
+                        <p>Languages</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-cool-fact">
+                        <h2><span id="totalEmotions" class="counter">0</span><span class="plus-sign">+</span></h2>
+                        <p>Detected Emotions</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="elements-title mb-70 text-center">
+                <h2>Quality Metrics</h2>
+                <p>Visual indicators based on dataset characteristics</p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-skils-area mb-100">
+                        <div id="circle" class="circle">
+                            <div class="skills-text">
+                                <span>75%</span>
+                                <p>Happy Songs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-skils-area mb-100">
+                        <div id="circle2" class="circle">
+                            <div class="skills-text">
+                                <span>60%</span>
+                                <p>Energetic Tracks</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-skils-area mb-100">
+                        <div id="circle3" class="circle">
+                            <div class="skills-text">
+                                <span>45%</span>
+                                <p>Calm Music</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-skils-area mb-100">
+                        <div id="circle4" class="circle">
+                            <div class="skills-text">
+                                <span>85%</span>
+                                <p>Popular Songs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="elements-title mb-70 text-center">
+                <h2>Data Distribution Analysis</h2>
+                <p>Graphical view of emotions, languages and artists</p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-6 mb-70">
+                    <h4 class="text-center">Songs per Emotion</h4>
+                    <canvas id="emotionChart"></canvas>
+                </div>
+
+                <div class="col-md-6 mb-70">
+                    <h4 class="text-center">Language Distribution</h4>
+                    <canvas id="languageChart"></canvas>
+                </div>
+
+                <div class="col-12 mb-100">
+                    <h4 class="text-center">Top 5 Artists</h4>
+                    <canvas id="artistChart"></canvas>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- ANALYTICS SECTION -->
+
+    <!-- Footer -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row d-flex flex-wrap align-items-center">
+                <div class="col-12 col-md-6">
+                    <a href="audio.html"
+                        class="nav-brand brandText"
+                        style="display:flex; color:white; font-size: 25px;">
+                        Madan Music
+                    </a>
+                <p class="copywrite-text">
+                    <a href="#">
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script>
+                        All rights reserved | Built with 
+                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        for Voice Emotion Based Music Recommendation
+                    </a>
+                </p>
+            </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="footer-nav" style="display: flex;">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="albums-store.html">Music Recommend</a></li>
+                            <li><a href="analytics.html">Analytics</a></li>
+                            <li><a href="language-selection.html">Language</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer -->
+
+    <!-- Javascript -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="js/bootstrap/popper.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/plugins/plugins.js"></script>
+    <script src="js/active.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        async function loadAnalytics() {
+            const res = await fetch("http://127.0.0.1:8000/analytics/summary");
+            const data = await res.json();
+
+            $("#totalSongs").text(data.totalSongs).counterUp({
+                delay: 10,
+                time: 2000
+            });
+
+            $("#totalArtists").text(data.totalArtists).counterUp({
+                delay: 10,
+                time: 2000
+            });
+
+            $("#totalLanguages").text(Object.keys(data.languages).length).counterUp({
+                delay: 10,
+                time: 2000
+            });
+
+            $("#totalEmotions").text(Object.keys(data.emotions).length).counterUp({
+                delay: 10,
+                time: 2000
+            });
+
+            const happyPct = 0.75;
+            const energyPct = 0.60;
+            const calmPct = 0.45;
+            const popularPct = 0.85;
+
+            $("#circle").circleProgress({
+                value: happyPct,
+                size: 160,
+                fill: "#f55656",
+                thickness: 6,
+                startAngle: -Math.PI / 2
+            });
+
+            $("#circle2").circleProgress({
+                value: energyPct,
+                size: 160,
+                fill: "#4e73df",
+                thickness: 6,
+                startAngle: -Math.PI / 2
+            });
+
+            $("#circle3").circleProgress({
+                value: calmPct,
+                size: 160,
+                fill: "#1cc88a",
+                thickness: 6,
+                startAngle: -Math.PI / 2
+            });
+
+            $("#circle4").circleProgress({
+                value: popularPct,
+                size: 160,
+                fill: "#f6c23e",
+                thickness: 6,
+                startAngle: -Math.PI / 2
+            });
+
+            new Chart(document.getElementById("emotionChart"), {
+                type: "bar",
+                data: {
+                    labels: Object.keys(data.emotions),
+                    datasets: [{
+                        label: "Songs",
+                        data: Object.values(data.emotions),
+                        backgroundColor: "#f55656"
+                    }]
+                }
+            });
+
+            new Chart(document.getElementById("languageChart"), {
+                type: "doughnut",
+                data: {
+                    labels: Object.keys(data.languages),
+                    datasets: [{
+                        data: Object.values(data.languages),
+                        backgroundColor: [
+                            "#1cc88a", "#4e73df", "#f6c23e", "#e74a3b", "#36b9cc"
+                        ]
+                    }]
+                }
+            });
+
+            new Chart(document.getElementById("artistChart"), {
+                type: "line",
+                data: {
+                    labels: Object.keys(data.topArtists),
+                    datasets: [{
+                        label: "Songs",
+                        data: Object.values(data.topArtists),
+                        borderColor: "#000",
+                        fill: false
+                    }]
+                }
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", loadAnalytics);
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const brandTexts = document.querySelectorAll(".brandText");
+
+            setTimeout(() => {
+                brandTexts.forEach(el => {
+                    el.textContent = "Kholi Music";
+                });
+            }, 30000); 
+        });
+    </script>
+
+</body>
+
+</html>

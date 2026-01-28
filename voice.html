@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Kholi Music - AI Music Recommendation</title>
+    <link rel="icon" href="img/core-img/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!--- Header --->
+    <header class="header-area">
+        <div class="oneMusic-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <nav class="classy-navbar justify-content-between" id="oneMusicNav">
+                        <a href="audio.html"
+                            class="nav-brand brandText"
+                            style="display:flex; color:white; font-size: 25px;">
+                            Madan Music
+                        </a>
+
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <div class="classy-menu">
+
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="albums-store.html">Music Recommendation</a></li>
+                                    <li><a href="#">AI System</a>
+                                        <ul class="dropdown" style="width: max-content;">
+                                            <li><a href="voice.html">Voice Emotion Detection</a></li>
+                                            <li><a href="emotion.html">Emotion-Based Songs</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="audio.html">Audio Features & ML</a></li>
+                                            <li><a href="#">Supported Emotions</a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#">Happy</a></li>
+                                                    <li><a href="#">Sad</a></li>
+                                                    <li><a href="#">Angry</a></li>
+                                                    <li><a href="#">Surprised</a>
+                                                    <li><a href="#">Neutral</a></li>
+                                                        <ul class="dropdown">
+                                                            <li><a href="#">Disgusted</a></li>
+                                                            <li><a href="#">Fearful</a></li>
+                                                            <li><a href="#">Calm</a></li>
+                                                            <li><a href="#">Confused</a></li>
+                                                            <li><a href="#">Overwhelmed</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#">Advance Emotions</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="analytics.html">Analytics</a></li>
+                                    <li><a href="language-selection.html">Language Selection</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+
+                                <div class="login-register-cart-button d-flex align-items-center">
+                                    <div class="login-register-btn mr-50">
+                                        <a href="login.html" id="loginBtn">Login / Register</a>
+                                    </div>
+
+                                    <div class="cart-btn" onclick="window.location.href='audio.html'">
+                                        <p>
+                                            <span class="icon-microphone"></span>
+                                            <span class="quantity">AI</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header -->
+
+    <!-- Hero -->
+    <section class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/hero9.png);">
+        <div class="bradcumbContent">
+            <p>Songs Based On</p>
+            <h2>Voice’s Emotion</h2>
+        </div>
+    </section>
+    <!-- Hero -->
+
+    <!-- Events -->
+    <section class="events-area section-padding-100">
+        <div class="container">
+            <div class="row" id="eventsContainer">
+                Loading songs...
+            </div>
+        </div>
+    </section>
+    <!-- Events -->
+
+    <!-- Testimonials -->
+    <section class="newsletter-testimonials-area">
+        <div class="container">
+            <div class="row">
+
+                <!-- Newsletter Area -->
+                <div class="col-12 col-lg-6">
+                    <div class="newsletter-area mb-100">
+                        <div class="section-heading text-left mb-50">
+                            <p>See what’s new</p>
+                            <h2>Subscribe to My Heart</h2>
+                        </div>
+                        <div class="newsletter-form">
+                            <form action="#">
+                                <input type="search" name="search" id="newsletterSearch" placeholder="E-mail">
+                                <button type="submit" class="btn oneMusic-btn">Subscribe <i class="fa fa-angle-double-right"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonials -->
+                <div class="col-12 col-lg-6">
+                    <div class="testimonials-area mb-100 bg-img bg-overlay" style="background-image: url(img/bg-img/Pradeep.jpg);">
+                        <div class="section-heading white text-left mb-50">
+                            <p>See what’s new</p>
+                            <h2>Testimonial</h2>
+                        </div>
+                        <!-- Testimonial Slide -->
+                        <div class="testimonials-slide owl-carousel">
+                            <!-- Single Slide -->
+                            <div class="single-slide">
+                                <p> I didn’t choose the song.  
+                                    The song chose me.
+                                    Peak Tamil cinema moment 🎬</p>
+                                <div class="testimonial-info d-flex align-items-center">
+                                    <div class="testimonial-thumb">
+                                        <img src="img/bg-img/Revanth.jpg" alt="Revanth V" style="height: 50px;">
+                                    </div>
+                                    <p>Revanth V</p>
+                                </div>
+                            </div>
+                            <!-- Single Slide -->
+                            <div class="single-slide">
+                                <p> Spotify: “Top Hits”
+                                    This app: “Nee romba overthinking panra” 😭💀
+                                    AI straight-up exposed my feelings.</p>
+                                <div class="testimonial-info d-flex align-items-center">
+                                    <div class="testimonial-thumb">
+                                        <img src="img/bg-img/Pradeep.jpg" alt="Pradeep Kumar">
+                                    </div>
+                                    <p>Pradeep Kumar</p>
+                                </div>
+                            </div>
+                            <div class="single-slide">
+                                <p> Came for AI music…
+                                    Stayed because the songs understood my pain 😔🎧
+                                    Even my friends don’t know me this well</p>
+                                <div class="testimonial-info d-flex align-items-center">
+                                    <div class="testimonial-thumb">
+                                        <img src="img/bg-img/Bala.jpg" alt="Bala Prakash" style="height: 40px;">
+                                    </div>
+                                    <p>Bala Prakash</p>
+                                </div>
+                            </div>
+                            <div class="single-slide">
+                                <p> I clicked “Play Now” thinking it’s a button…
+                                    Turns out it’s a lifestyle choice 😎🔥  
+                                    Amma thinks I’m studying, I’m vibing.</p>
+                                <div class="testimonial-info d-flex align-items-center">
+                                    <div class="testimonial-thumb">
+                                        <img src="img/bg-img/Prajan.jpg" alt="Prajan Kumar" style="height: 40px;">
+                                    </div>
+                                    <p>Prajan Kumar</p>
+                                </div>
+                            </div>
+                            <div class="single-slide">
+                                <p> AI recommended a song so accurate  
+                                    I stared at the screen like 👁️👄👁️  
+                                    “Idhu epdi theriyum da…”</p>
+                                <div class="testimonial-info d-flex align-items-center">
+                                    <div class="testimonial-thumb">
+                                        <img src="img/bg-img/Harish.jpg" alt="Harish Kumar" style="height: 40px;">
+                                    </div>
+                                    <p>Harish Kumar</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials -->
+
+    <!-- Contact -->
+    <section class="contact-area section-padding-100 bg-img bg-overlay bg-fixed has-bg-img" style="background-image: url(img/bg-img/hero2.png);">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading white">
+                        <p>See what’s new</p>
+                        <h2>Get In Touch</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <!-- Contact Form Area -->
+                    <div class="contact-form-area">
+                        <form action="#" method="post">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="name" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="email" placeholder="E-mail">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button class="btn oneMusic-btn mt-30" type="submit">Send <i class="fa fa-angle-double-right"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact -->
+
+    <!-- Footer -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row d-flex flex-wrap align-items-center">
+                <div class="col-12 col-md-6">
+                    <a href="audio.html"
+                        class="nav-brand brandText"
+                        style="display:flex; color:white; font-size: 25px;">
+                        Madan Music
+                    </a>
+                <p class="copywrite-text">
+                    <a href="#">
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script>
+                        All rights reserved | Built with 
+                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        for Voice Emotion Based Music Recommendation
+                    </a>
+                </p>
+            </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="footer-nav" style="display: flex;">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="albums-store.html">Music Recommend</a></li>
+                            <li><a href="analytics.html">Analytics</a></li>
+                            <li><a href="language-selection.html">Language</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer -->
+
+
+    <!-- All Javascript Script -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="js/bootstrap/popper.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/plugins/plugins.js"></script>
+    <script src="js/active.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const container = document.getElementById("eventsContainer");
+            const hoverAudio = new Audio();
+
+            fetch("http://127.0.0.1:8000/tamil-latest-songs")
+                .then(res => {
+                    console.log("📡 API status:", res.status);
+                    return res.json();
+                })
+                .then(data => {
+
+                    container.innerHTML = "";
+
+                    if (!data.songs || !data.songs.length) {
+                        container.innerHTML = "<p>No songs available</p>";
+                        return;
+                    }
+
+                    data.songs.forEach(song => {
+
+                        const img = song.artworkUrl100
+                            ? song.artworkUrl100.replace("100x100", "400x400")
+                            : "img/bg-img/e1.jpg";
+
+                        container.insertAdjacentHTML("beforeend", `
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="single-event-area mb-30"
+                                    onmouseenter="playPreview('${song.previewUrl}')"
+                                    onmouseleave="stopPreview()"
+                                    style="cursor:pointer; transition:transform 0.3s">
+
+                                    <div class="event-thumbnail">
+                                        <img src="${img}" style="border-radius:12px 12px 0 0;">
+                                    </div>
+
+                                    <div class="event-text" style="border-radius:0 0 12px 12px">
+                                        <h4>${song.trackName}</h4>
+                                        <div class="event-meta-data">
+                                            <a href="#" class="event-place">${song.artistName}</a>
+                                            <a href="#" class="event-date">
+                                                ${new Date(song.releaseDate).getFullYear()}
+                                            </a>
+                                        </div>
+                                        <span class="btn see-more-btn">Hover to Play</span>
+                                    </div>
+                                </div>
+                            </div>
+                        `);
+                    });
+                })
+                .catch(err => {
+                    console.error("❌ Fetch failed:", err);
+                    container.innerHTML = "<p>Failed to load songs</p>";
+                });
+
+            window.playPreview = (url) => {
+                hoverAudio.pause();
+                hoverAudio.src = url;
+                hoverAudio.currentTime = 0;
+                hoverAudio.play().catch(()=>{});
+            };
+
+            window.stopPreview = () => {
+                hoverAudio.pause();
+                hoverAudio.currentTime = 0;
+            };
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const brandTexts = document.querySelectorAll(".brandText");
+
+            setTimeout(() => {
+                brandTexts.forEach(el => {
+                    el.textContent = "Kholi Music";
+                });
+            }, 30000); 
+        });
+    </script>
+</body>
+
+</html>

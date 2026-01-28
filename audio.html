@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Kholi Music - AI Music Recommendation</title>
+    <link rel="icon" href="img/core-img/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Preloader  -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!--- Header --->
+    <header class="header-area">
+        <div class="oneMusic-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <nav class="classy-navbar justify-content-between" id="oneMusicNav">
+                        <a href="audio.html"
+                            class="nav-brand brandText"
+                            style="display:flex; color:white; font-size: 25px;">
+                            Madan Music
+                        </a>
+
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <div class="classy-menu">
+
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="albums-store.html">Music Recommendation</a></li>
+                                    <li><a href="#">AI System</a>
+                                        <ul class="dropdown" style="width: max-content;">
+                                            <li><a href="voice.html">Voice Emotion Detection</a></li>
+                                            <li><a href="emotion.html">Emotion-Based Songs</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="audio.html">Audio Features & ML</a></li>
+                                            <li><a href="#">Supported Emotions</a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#">Happy</a></li>
+                                                    <li><a href="#">Sad</a></li>
+                                                    <li><a href="#">Angry</a></li>
+                                                    <li><a href="#">Surprised</a>
+                                                    <li><a href="#">Neutral</a></li>
+                                                        <ul class="dropdown">
+                                                            <li><a href="#">Disgusted</a></li>
+                                                            <li><a href="#">Fearful</a></li>
+                                                            <li><a href="#">Calm</a></li>
+                                                            <li><a href="#">Confused</a></li>
+                                                            <li><a href="#">Overwhelmed</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#">Advance Emotions</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="analytics.html">Analytics</a></li>
+                                    <li><a href="language-selection.html">Language Selection</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+
+                                <div class="login-register-cart-button d-flex align-items-center">
+                                    <div class="login-register-btn mr-50">
+                                        <a href="login.html" id="loginBtn">Login / Register</a>
+                                    </div>
+
+                                    <div class="cart-btn" onclick="window.location.href='audio.html'">
+                                        <p>
+                                            <span class="icon-microphone"></span>
+                                            <span class="quantity">AI</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header -->
+
+    <!-- Hero -->
+    <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/hero7.png);">
+        <div class="bradcumbContent">
+            <p>See what’s new</p>
+            <h2>Virat Kholi Model</h2>
+        </div>
+    </div>
+    <!-- Hero -->
+
+    <!-- Trained Model -->
+    <section class="elements-area section-padding-100" data-no-reinit>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+
+                    <h3>🎤 Voice Emotion Based Recommendation</h3>
+
+                    <select id="language" class="form-control" style="max-width:300px;margin:auto">
+                        <option>Tamil</option>
+                        <option>Hindi</option>
+                        <option>Telugu</option>
+                        <option>Malayalam</option>
+                        <option>English</option>
+                    </select>
+                    <br>
+                    <button type="button"
+                            class="btn oneMusic-btn mt-20"
+                            onclick="startRecording(event)">
+                        🎙️ Record Voice
+                    </button>
+
+                    <p id="emotionResult" style="margin-top:20px;font-weight:600"></p>
+
+                    <div id="songResults" style="margin-top:30px"></div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Trained Model -->
+
+    <!-- Footer -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row d-flex flex-wrap align-items-center">
+                <div class="col-12 col-md-6">
+                    <a href="audio.html"
+                        class="nav-brand brandText"
+                        style="display:flex; color:white; font-size: 25px;">
+                        Madan Music
+                    </a>
+                <p class="copywrite-text">
+                    <a href="#">
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script>
+                        All rights reserved | Built with 
+                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        for Voice Emotion Based Music Recommendation
+                    </a>
+                </p>
+            </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="footer-nav" style="display: flex;">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="albums-store.html">Music Recommend</a></li>
+                            <li><a href="analytics.html">Analytics</a></li>
+                            <li><a href="language-selection.html">Language</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer -->
+
+
+    <!-- All Javascript Script -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="js/bootstrap/popper.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/plugins/plugins.js"></script> 
+    <script src="js/active.js"></script>
+
+    <script>
+        const STORAGE_KEY = "Kholi ML Model";
+        let busy = false;
+
+        function saveState(state) {
+            try {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+                console.log("✅ State saved", state);
+            } catch (e) {
+                console.error("❌ Save failed", e);
+            }
+        }
+
+        function loadState() {
+            try {
+                const raw = localStorage.getItem(STORAGE_KEY);
+                return raw ? JSON.parse(raw) : null;
+            } catch (e) {
+                console.error("❌ Load failed", e);
+                return null;
+            }
+        }
+
+        function renderState(state) {
+            if (!state) return;
+
+            const emotionEl = document.getElementById("emotionResult");
+            const songsEl = document.getElementById("songResults");
+            if (!emotionEl || !songsEl) return;
+
+            /* 🎭 Emotion badge */
+            emotionEl.innerHTML = `
+                <span class="badge badge-info px-3 py-2">
+                    <i class="bi bi-emoji-smile"></i>
+                    ${state.emotion.toUpperCase()}
+                </span>
+                <span class="badge badge-secondary px-3 py-2 ml-2">
+                    <i class="bi bi-translate"></i>
+                    ${state.language}
+                </span>
+            `;
+
+            /* 🎶 Bootstrap-style table */
+            let html = `
+                <div class="table-responsive mt-4">
+                    <table class="table table-striped table-hover table-bordered align-middle">
+                        <thead class="thead-light">
+                            <tr>
+                                <th style="width:60px">#</th>
+                                <th>Track</th>
+                                <th>Artist</th>
+                                <th style="width:120px">Play</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+            `;
+
+            state.songs.forEach((song, i) => {
+                html += `
+                    <tr>
+                        <td class="text-center font-weight-bold">${i + 1}</td>
+                        <td>
+                            <i class="bi bi-music-note-beamed text-primary"></i>
+                            ${song.track_name}
+                        </td>
+                        <td>
+                            <i class="bi bi-person-fill text-muted"></i>
+                            ${song.artist_name}
+                        </td>
+                        <td class="text-center">
+                            <a href="${song.track_url}"
+                            target="_blank"
+                            class="btn btn-sm btn-outline-primary">
+                                <i class="bi bi-play-circle"></i> Play
+                            </a>
+                        </td>
+                    </tr>
+                `;
+            });
+
+            html += `
+                        </tbody>
+                    </table>
+                </div>
+            `;
+
+            songsEl.innerHTML = html;
+        }
+
+        function restore() {
+            const state = loadState();
+            if (state) {
+                console.log("🔁 Restoring state");
+                renderState(state);
+            }
+        }
+
+        async function startRecording(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (busy) return;
+            busy = true;
+
+            const language = document.getElementById("language").value;
+            const emotionEl = document.getElementById("emotionResult");
+            const songsEl = document.getElementById("songResults");
+
+            emotionEl.innerHTML = `
+                <span class="text-info">
+                    <i class="bi bi-mic-fill"></i> Recording voice…
+                </span>
+            `;
+            songsEl.innerHTML = "";
+
+            try {
+                const res = await fetch("http://127.0.0.1:8000/predict", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ language })
+                });
+
+                const data = await res.json();
+
+                const state = {
+                    emotion: data.emotion,
+                    language,
+                    songs: data.songs,
+                    timestamp: Date.now()
+                };
+
+                saveState(state);
+                renderState(state);
+
+            } catch (err) {
+                emotionEl.innerHTML = `
+                    <span class="text-danger">
+                        <i class="bi bi-x-circle-fill"></i> Voice processing failed
+                    </span>
+                `;
+                console.error(err);
+            }
+
+            busy = false;
+        }
+
+        document.addEventListener("DOMContentLoaded", restore);
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const brandTexts = document.querySelectorAll(".brandText");
+
+            setTimeout(() => {
+                brandTexts.forEach(el => {
+                    el.textContent = "Kholi Music";
+                });
+            }, 30000); 
+        });
+    </script>
+
+</body>
+
+</html>

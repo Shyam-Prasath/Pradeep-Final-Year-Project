@@ -1,0 +1,8 @@
+numpy
+librosa
+sounddevice
+scipy
+scikit-learn
+streamlit
+pickle-mixin
+pandas

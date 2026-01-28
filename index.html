@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Kholi Music - AI Music Recommendation</title>
+    <link rel="icon" href="img/core-img/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!--- Header --->
+    <header class="header-area">
+        <div class="oneMusic-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <nav class="classy-navbar justify-content-between" id="oneMusicNav">
+                        <a href="audio.html"
+                            class="nav-brand brandText"
+                            style="display:flex; color:white;">
+                            Madan Music
+                        </a>
+
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <div class="classy-menu">
+
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="albums-store.html">Music Recommendation</a></li>
+                                    <li><a href="#">AI System</a>
+                                        <ul class="dropdown" style="width: max-content;">
+                                            <li><a href="voice.html">Voice Emotion Detection</a></li>
+                                            <li><a href="emotion.html">Emotion-Based Songs</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="audio.html">Audio Features & ML</a></li>
+                                            <li><a href="#">Supported Emotions</a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#">Happy</a></li>
+                                                    <li><a href="#">Sad</a></li>
+                                                    <li><a href="#">Angry</a></li>
+                                                    <li><a href="#">Surprised</a>
+                                                    <li><a href="#">Neutral</a></li>
+                                                        <ul class="dropdown">
+                                                            <li><a href="#">Disgusted</a></li>
+                                                            <li><a href="#">Fearful</a></li>
+                                                            <li><a href="#">Calm</a></li>
+                                                            <li><a href="#">Confused</a></li>
+                                                            <li><a href="#">Overwhelmed</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#">Advance Emotions</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="analytics.html">Analytics</a></li>
+                                    <li><a href="language-selection.html">Language Selection</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+
+                                <div class="login-register-cart-button d-flex align-items-center">
+                                    <div class="login-register-btn mr-50">
+                                        <a href="login.html" id="loginBtn">Login / Register</a>
+                                    </div>
+
+                                    <div class="cart-btn" onclick="window.location.href='audio.html'">
+                                        <p>
+                                            <span class="icon-microphone"></span>
+                                            <span class="quantity">AI</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header -->
+
+    <!-- Hero -->
+    <section class="hero-area">
+        <div class="hero-slides owl-carousel">
+            <div class="single-hero-slide d-flex align-items-center justify-content-center">
+                <div class="slide-img bg-img" style="background-image: url(img/bg-img/hero1.png);"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="hero-slides-content text-center">
+                                isai mazhaiyil nanaya neengal
+                                <h6 data-animation="fadeInUp" data-delay="100ms">Isai Mazhaiyil</h6>
+                                <h2 data-animation="fadeInUp" data-delay="300ms">Nanaya Neengal<span>Nanaya Neengal</span></h2>
+                                <a data-animation="fadeInUp" data-delay="500ms" href="#" class="btn oneMusic-btn mt-50">Thayaara...? <i class="fa fa-angle-double-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="single-hero-slide d-flex align-items-center justify-content-center">
+                <div class="slide-img bg-img" style="background-image: url(img/bg-img/hero2.png);"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="hero-slides-content text-center">
+                                <h6 data-animation="fadeInUp" data-delay="100ms">Vara Vara</h6>
+                                <h2 data-animation="fadeInUp" data-delay="300ms">Ninnukori<span>Ninnukori</span></h2>
+                                <a data-animation="fadeInUp" data-delay="500ms" href="#" class="btn oneMusic-btn mt-50">Varanam<i class="fa fa-angle-double-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero -->
+
+    <!--Latest Albums -->
+    <section class="latest-albums-area section-padding-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading style-2">
+                        <p>See what’s new</p>
+                        <h2>Latest Albums</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-9">
+                    <div class="ablums-text text-center mb-70">
+                        <p>
+                            Discover the latest music recommendations generated dynamically
+                            based on real-time data, while preserving the original UI structure
+                            and design aesthetics.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="albums-slideshow owl-carousel" id="albumsContainer">
+                        <div class="single-album">
+                            <div class="album-info">
+                                <a href="#">
+                                    <h5>Loading...</h5>
+                                </a>
+                                <p>Please wait</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Albums -->
+
+    <!-- Buy Now -->
+
+    <section class="oneMusic-buy-now-area has-fluid bg-gray section-padding-100">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading style-2">
+                        <p>See what’s new</p>
+                        <h2>Buy What’s New</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" id="buyAlbumsContainer">
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="load-more-btn text-center wow fadeInUp" data-wow-delay="300ms">
+                        <a href="#" class="btn oneMusic-btn" id="loadMoreBtn">
+                            Load More <i class="fa fa-angle-double-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buy Now -->
+
+    <!-- Featured Artist -->
+    <section class="featured-artist-area section-padding-100 bg-img bg-overlay bg-fixed" style="background-image: url(img/bg-img/campa.png);">
+        <div class="container">
+            <div class="row align-items-end">
+                <div class="col-12 col-md-5 col-lg-4">
+                    <div class="featured-artist-thumb">
+                        <img src="img/bg-img/feature1.gif" alt="" style="height: 25em; border-radius: 20px;">
+                    </div>
+                </div>
+                <div class="col-12 col-md-7 col-lg-8">
+                    <div class="featured-artist-content">
+                        <!-- Section Heading -->
+                        <div class="section-heading white text-left mb-30">
+                                <p>Discover what’s trending</p>
+                                <h2>Emotion-Driven Music Picks</h2>
+                            </div>
+
+                            <p>
+                                Experience music recommendations intelligently generated using voice-tone
+                                and emotion analysis. This section highlights trending Tamil and Indian tracks,
+                                dynamically selected to match moods such as energetic, calm, joyful, or playful,
+                                while preserving the original design and listening experience.
+                            </p>
+
+                            <div class="song-play-area">
+                                <div class="song-name">
+                                    <p>01. Trending Mood Match</p>
+                                </div>
+
+                            <audio preload="auto" controls>
+                                <source src="audio/Reel.mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Featured Artist -->
+
+    <!-- Miscellaneous -->
+    <section class="miscellaneous-area section-padding-100-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-4" style="cursor: pointer;">
+                    <div class="weeks-top-area mb-100">
+                        <div class="section-heading text-left mb-50 wow fadeInUp" data-wow-delay="50ms">
+                            <p>Trending this week</p>
+                            <h2>Top Tamil Picks</h2>
+                        </div>
+                        <div id="weeklyTopTamil" >
+                            Loading....
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Hits Songs (2026 – Tamil) -->
+                <div class="col-12 col-lg-4">
+                    <div class="new-hits-area mb-100">
+                        <div class="section-heading text-left mb-50 wow fadeInUp" data-wow-delay="50ms">
+                            <p>Fresh releases</p>
+                            <h2>New Tamil Hits (2026)</h2>
+                        </div>
+                        <div id="newHitsLoader">
+                            <p style="color:#999;">Loading new Tamil hits…</p>
+                        </div>
+                        <div id="newTamilHits" style="display:none;">
+                            Loading...
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Popular Artists -->
+
+                <div class="col-12 col-lg-4">
+                    <div class="popular-artists-area mb-100">
+                        <div class="section-heading text-left mb-50 wow fadeInUp" data-wow-delay="50ms">
+                            <p>See what’s new</p>
+                            <h2>Popular Artists</h2>
+                        </div>
+
+                        <!-- Artists list container -->
+                        <div id="tamilArtistsContainer">
+                            <p style="color:#999;">Loading…</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Miscellaneous -->
+
+    <!-- Contact -->
+    <section class="contact-area section-padding-100 bg-img bg-overlay bg-fixed has-bg-img" style="background-image: url(img/bg-img/Hero3.png);">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading white wow fadeInUp" data-wow-delay="100ms">
+                        <p>See what’s new</p>
+                        <h2>Get In Touch</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <!-- Contact Form Area -->
+                    <div class="contact-form-area">
+                        <form action="#" method="post">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="form-group wow fadeInUp" data-wow-delay="100ms">
+                                        <input type="text" class="form-control" id="name" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="form-group wow fadeInUp" data-wow-delay="200ms">
+                                        <input type="email" class="form-control" id="email" placeholder="E-mail">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group wow fadeInUp" data-wow-delay="300ms">
+                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group wow fadeInUp" data-wow-delay="400ms">
+                                        <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center wow fadeInUp" data-wow-delay="500ms">
+                                    <button class="btn oneMusic-btn mt-30" type="submit">Send <i class="fa fa-angle-double-right"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact -->
+
+    <!-- Footer -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row d-flex flex-wrap align-items-center">
+                <div class="col-12 col-md-6">
+                    <a href="audio.html"
+                        class="nav-brand brandText"
+                        style="display:flex; color:white; font-size: 25px;">
+                        Madan Music
+                    </a>
+
+                <p class="copywrite-text">
+                    <a href="#">
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script>
+                        All rights reserved | Built with 
+                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        for Voice Emotion Based Music Recommendation
+                    </a>
+                </p>
+            </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="footer-nav" style="display: flex;">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="albums-store.html">Music Recommend</a></li>
+                            <li><a href="analytics.html">Analytics</a></li>
+                            <li><a href="language-selection.html">Language</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer -->
+
+    <!-- 🎧 MUSIC PLAYER MODAL -->
+    <div id="musicPlayerModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:9999;">
+        <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%; color:white;">
+            
+            <div id="discContainer" style="
+                width:220px;
+                height:220px;
+                border-radius:50%;
+                background-size:cover;
+                background-position:center;
+                animation: spin 4s linear infinite;
+                margin-bottom:20px;
+            "></div>
+
+            <h4 id="playerSongTitle"></h4>
+            <p id="playerArtist"></p>
+
+            <div id="audioWrapper"></div>
+
+            <button onclick="closePlayer()" style="margin-top:20px;" class="btn oneMusic-btn">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <style>
+    @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+    </style>
+
+
+    <!-- All Javascript Script -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="js/bootstrap/popper.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/plugins/plugins.js"></script>
+    <script src="js/active.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            const container = $("#albumsContainer");
+
+            fetch("http://127.0.0.1:8000/latest-tamil-songs")
+                .then(res => res.json())
+                .then(data => {
+
+                    // Destroy carousel if already initialized
+                    if (container.hasClass("owl-loaded")) {
+                        container.trigger("destroy.owl.carousel");
+                        container.removeClass("owl-loaded");
+                        container.find(".owl-stage-outer").children().unwrap();
+                    }
+
+                    container.html("");
+
+                    data.results.forEach(song => {
+                        const albumHTML = `
+                            <div class="single-album">
+                                <img src="${song.artworkUrl100.replace('100x100', '600x600')}" alt="${song.trackName}">
+                                <div class="album-info">
+                                    <a href="${song.trackViewUrl}" target="_blank">
+                                        <h5>${song.trackName}</h5>
+                                    </a>
+                                    <p>${song.artistName}</p>
+                                </div>
+                            </div>
+                        `;
+                        container.append(albumHTML);
+                    });
+
+                    // Reinitialize Owl Carousel
+                    container.owlCarousel({
+                        items: 4,
+                        margin: 30,
+                        loop: true,
+                        autoplay: true,
+                        autoplayTimeout: 3000,
+                        nav: true,
+                        dots:false,
+                        navText: [
+                            "<i class='fa fa-chevron-left'></i>",
+                            "<i class='fa fa-chevron-right'></i>"
+                        ],
+                        responsive: {
+                            0: { items: 1 },
+                            768: { items: 2 },
+                            992: { items: 4 }
+                        }
+                    });
+                })
+                .catch(err => console.error("Music fetch error:", err));
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            const container = $("#buyAlbumsContainer");
+            const button = $("#loadMoreBtn");
+
+            let allSongs = [];
+            let visibleCount = 12;
+            const step = 12;
+
+            fetch("http://127.0.0.1:8000/indian-songs")
+                .then(res => res.json())
+                .then(data => {
+                    allSongs = data.results;
+                    renderSongs();
+                });
+
+            function renderSongs() {
+                container.html("");
+
+                    allSongs
+                        .filter(song => song.previewUrl)
+                        .slice(0, visibleCount)
+                        .forEach((song, index) => {                    const delay = ((index % 6) + 1) * 100;
+                    const img = song.artworkUrl100.replace("100x100", "600x600");
+
+                    const html = `
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                            <div class="single-album-area wow fadeInUp" data-wow-delay="${delay}ms">
+                                <div class="album-thumb">
+                                    <img src="${img}" alt="">
+                                    <div class="play-icon">
+                                        <a href="javascript:void(0)" onclick="openPlayer(
+                                            '${song.previewUrl || ""}',
+                                            '${img}',
+                                            '${song.trackName.replace(/'/g, "\\'")}',
+                                            '${song.artistName.replace(/'/g, "\\'")}'
+                                        )">                                            <span class="icon-play-button"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="album-info">
+                                    <a href="${song.trackViewUrl}" target="_blank">
+                                        <h5>${song.trackName}</h5>
+                                    </a>
+                                    <p>${song.artistName}</p>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    container.append(html);
+                });
+            }
+
+            button.on("click", function (e) {
+                e.preventDefault();
+                if (visibleCount + step < allSongs.length) {
+                    visibleCount += step;
+                    renderSongs();
+                    button.html('Load More <i class="fa fa-angle-double-right"></i>');
+                }
+                else if (visibleCount < allSongs.length) {
+                    visibleCount = allSongs.length;
+                    renderSongs();
+                    button.html('Show Less <i class="fa fa-angle-double-up"></i>');
+                }
+                else {
+                    visibleCount = step;
+                    renderSongs();
+                    button.html('Load More <i class="fa fa-angle-double-right"></i>');
+                }
+            });
+
+
+        });
+
+        function openPlayer(audioUrl, img, title, artist) {
+
+            if (!audioUrl) {
+                alert("Preview not available for this song");
+                return;
+            }
+
+            const modal = document.getElementById("musicPlayerModal");
+            const wrapper = document.getElementById("audioWrapper");
+
+            if (!wrapper) {
+                console.error("Audio wrapper not found");
+                return;
+            }
+
+            // Clear old audio
+            wrapper.innerHTML = "";
+
+            // Create audio dynamically
+            const audio = document.createElement("audio");
+            audio.controls = true;
+            audio.autoplay = true;
+            audio.src = audioUrl;
+
+            wrapper.appendChild(audio);
+
+            document.getElementById("discContainer").style.backgroundImage = `url(${img})`;
+            document.getElementById("playerSongTitle").innerText = title;
+            document.getElementById("playerArtist").innerText = artist;
+
+            modal.style.display = "block";
+
+            audio.play().catch(err => console.log("Autoplay blocked:", err));
+        }
+
+
+        function closePlayer() {
+            const wrapper = document.getElementById("audioWrapper");
+            if (wrapper) wrapper.innerHTML = "";
+            $("#musicPlayerModal").fadeOut();
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const container = document.getElementById("weeklyTopTamil");
+
+            fetch("http://127.0.0.1:8000/weekly-top-tamil")
+                .then(res => res.json())
+                .then(data => {
+
+                    container.innerHTML = "";
+                    data.results.slice(0, 5).forEach((song, index) => {
+
+                        const img = song.artworkUrl100
+                            ? song.artworkUrl100.replace("100x100", "200x200")
+                            : "img/bg-img/wt1.jpg";
+
+                        const html = `
+                            <div class="single-top-item d-flex wow fadeInUp" data-wow-delay="${(index+1)*100}ms">
+                                <div class="thumbnail">
+                                    <img src="${img}" alt="${song.trackName}" style="border-radius: 10px;">
+                                </div>
+                                <div class="content-">
+                                    <h6>${song.artistName}</h6>
+                                    <p>${song.trackName}</p>
+                                </div>
+                            </div>
+                        `;
+
+                        container.insertAdjacentHTML("beforeend", html);
+                    });
+                })
+                .catch(err => {
+                    console.error("Weekly top Tamil fetch error:", err);
+                    container.innerHTML = "<p>Unable to load weekly top songs</p>";
+                });
+
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const container = document.getElementById("newTamilHits");
+            const loader = document.getElementById("newHitsLoader");
+
+            fetch("http://127.0.0.1:8000/new-tamil-hits")
+                .then(res => res.json())
+                .then(data => {
+
+                    if (data.year !== "2026") {
+                        console.warn("No 2026 movie songs found, showing latest movie hits");
+                    }
+
+                    loader.style.display = "none";
+                    container.style.display = "block";
+                    container.innerHTML = "";
+
+                    data.results.slice(0, 5).forEach((song, index) => {
+
+                        const img = song.artworkUrl100
+                            ? song.artworkUrl100.replace("100x100", "200x200")
+                            : "img/bg-img/wt7.jpg";
+
+                        const preview = song.previewUrl ? song.previewUrl : null;
+
+                        const html = `
+                            <div class="single-new-item d-flex align-items-center justify-content-between wow fadeInUp"
+                                data-wow-delay="${(index + 1) * 100}ms">
+
+                                <div class="first-part d-flex align-items-center">
+                                    <div class="thumbnail">
+                                        <img src="${img}" alt="${song.trackName}">
+                                    </div>
+                                    <div class="content-">
+                                        <h6>${song.artistName}</h6>
+                                        <p>${song.trackName}</p>
+                                    </div>
+                                </div>
+
+                                ${preview ? `
+                                    <a href="javascript:void(0)" 
+                                    class="video--play--btn"
+                                    data-preview="${preview}"
+                                    onclick="togglePlay(this)">
+                                        <span class="icon-play-button"></span>
+                                    </a>
+                                    ` : `<span style="color:#aaa;">No preview</span>`}
+
+
+                            </div>
+                        `;
+
+                        container.insertAdjacentHTML("beforeend", html);
+                    });
+
+                    if (typeof WOW === "function") {
+                        new WOW().init();
+                    }
+
+                })
+                .catch(err => {
+                    console.error("New Tamil hits fetch error:", err);
+                    loader.innerHTML = "<p style='color:#ff6b6b;'>Unable to load new hits</p>";
+                });
+
+        });
+    </script>
+    <script>
+        let currentButton = null;
+        let globalAudio = null;
+
+        function togglePlay(button) {
+
+            const previewUrl = button.getAttribute("data-preview");
+
+            if (!previewUrl) {
+                alert("Preview not available for this song");
+                return;
+            }
+
+            // 🔑 Create audio once (lazy init)
+            if (!globalAudio) {
+                globalAudio = document.createElement("audio");
+                globalAudio.preload = "none";
+                document.body.appendChild(globalAudio);
+            }
+
+            // Same button → pause
+            if (currentButton === button && !globalAudio.paused) {
+                globalAudio.pause();
+                button.querySelector("span").className = "icon-play-button";
+                return;
+            }
+
+            // Pause previous
+            if (!globalAudio.paused && currentButton) {
+                globalAudio.pause();
+                currentButton.querySelector("span").className = "icon-play-button";
+            }
+
+            globalAudio.src = previewUrl;
+            globalAudio.load();
+            globalAudio.play().catch(err => {
+                console.warn("Playback blocked:", err);
+            });
+
+            button.querySelector("span").className = "icon-pause";
+            currentButton = button;
+        }
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const container = document.getElementById("tamilArtistsContainer");
+
+            fetch("http://127.0.0.1:8000/tamil-artists")
+                .then(res => res.json())
+                .then(data => {
+
+                    container.innerHTML = "";
+
+                    // Remove duplicate artist names
+                    const uniqueArtists = {};
+                    data.results.forEach(artist => {
+                        if (artist.artistName) {
+                            uniqueArtists[artist.artistName] = artist;
+                        }
+                    });
+
+                    Object.values(uniqueArtists).slice(0, 6).forEach((artist, index) => {
+                        //const imgSrc = artist.image
+                        //? artist.image.replace("100x100", "300x300")
+                        //: "img/bg-img/pa1.jpg";
+                        const safeName = artist.artistName
+                            .toLowerCase()
+                            .replace(/\s+/g, "-")
+                            .replace(/[^a-z0-9-]/g, "");
+
+                        const imgsrc = `img/bg-img/${safeName}.png`;
+
+                        const html = `
+                            <div class="single-artists d-flex align-items-center wow fadeInUp"
+                                data-wow-delay="${(index + 1) * 100}ms" style="cursor: pointer; padding:10px">
+                                <div class="thumbnail">
+                                    <img src="${imgsrc}" alt="${artist.artistName}"style="width:55px;height:55px;border-radius:50%;object-fit:cover;">
+                                </div>
+                                <div class="content-">
+                                    <p>${artist.artistName}</p>
+                                </div>
+                            </div>
+                        `;
+
+                        container.insertAdjacentHTML("beforeend", html);
+                    });
+
+                    if (typeof WOW === "function") {
+                        new WOW().init();
+                    }
+                })
+                .catch(err => {
+                    console.error("Tamil artist fetch error:", err);
+                    container.innerHTML = "<p style='color:#999;'>Unable to load artists</p>";
+                });
+
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const brandTexts = document.querySelectorAll(".brandText");
+
+            setTimeout(() => {
+                brandTexts.forEach(el => {
+                    el.textContent = "Kholi Music";
+                });
+            }, 30000); 
+        });
+    </script>
+
+</body>
+</html>
